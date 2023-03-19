@@ -1,0 +1,120 @@
+.intro {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  padding-top: 5rem;
+  margin-bottom: 32.5rem;
+
+  @media (--mobile) {
+    padding-top: 0;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.intro__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.6rem;
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.2rem;
+  }
+}
+
+.intro__text-content {
+  display: flex;
+  flex-direction: column;
+  @media (--desktop) {
+    width: 50%;
+    flex-grow: 1;
+    padding-top: 13rem;
+  }
+}
+
+.intro__image-wrapper {
+  width: 56rem;
+  flex-shrink: 0;
+
+  @media (--mobile) {
+    width: auto;
+    flex-shrink: 1;
+    margin: 0 calc(-1 * var(--content-padding));
+    order: -1;
+  }
+}
+
+.intro__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.intro__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  margin-bottom: 5rem;
+  max-width: 47rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    max-width: none;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.intro__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.2rem;
+  line-height: 3.9rem;
+  color: rgba(224, 224, 224, 0.8);
+  margin-bottom: 6rem;
+  max-width: 54rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  & b {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+}
+.intro__links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.6rem;
+  row-gap: 1.3rem;
+
+  @media (--mobile) {
+    gap: 2.4rem;
+  }
+}
+
+.intro__link-image {
+  height: 6rem;
+  width: auto;
+  max-width: none;
+  display: block;
+
+  @media (--mobile) {
+    height: 6rem;
+  }
+}

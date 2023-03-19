@@ -1,0 +1,133 @@
+.reviews {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  margin-bottom: 24.5rem;
+
+  @media (--mobile) {
+    margin-bottom: 16.7rem;
+    overflow-x: hidden;
+  }
+}
+
+.reviews__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  text-align: center;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-align: center;
+    font-family: var(--mulish);
+  }
+}
+
+.reviews__slider-controls {
+  margin-bottom: 7rem;
+
+  @media (--mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.reviews__slider-arrow {
+  display: none;
+
+  @media (--mobile) {
+    display: block;
+    flex-shrink: 0;
+
+    & svg {
+      width: 4rem;
+      height: 1.4rem;
+      fill: white;
+      transition: fill 0.2s;
+    }
+
+    &.swiper-button-disabled {
+      & svg {
+        fill: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+.reviews__slider {
+  margin: 0 auto;
+  max-width: 88.6rem;
+
+  @media (--mobile) {
+    margin: 0;
+    max-width: none;
+  }
+  & .swiper {
+    margin: 0;
+    overflow: visible;
+  }
+
+  & .swiper-slide {
+    display: flex;
+    flex-direction: column;
+
+    @media (--mobile) {
+      margin-right: 2rem;
+      width: 27.2rem;
+      flex-shrink: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  & .swiper-wrapper {
+    @media (--desktop) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 8.6rem;
+      row-gap: 10rem;
+    }
+  }
+}
+
+.reviews__card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @media (--mobile) {
+    gap: 2.4rem;
+  }
+}
+
+.reviews__card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.reviews__card-author {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}

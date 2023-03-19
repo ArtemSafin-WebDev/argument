@@ -1,0 +1,123 @@
+.argument {
+  margin-bottom: 33.6rem;
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+
+  @media (--mobile) {
+    margin-bottom: 10rem;
+  }
+}
+
+.argument__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+}
+
+.argument__row {
+  display: grid;
+
+  align-items: center;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 8.6rem;
+  margin: 0 auto;
+  max-width: 88.6rem;
+
+  @media (--mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 7rem;
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.argument__left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.argument__logo {
+  position: relative;
+  width: 20rem;
+  background: #121619;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 34rem;
+    height: 34rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background: #202c35;
+    filter: blur(11rem);
+    border-radius: 4rem;
+  }
+}
+
+.argument__logo-image {
+  width: 8.4rem;
+  height: auto;
+}
+
+.argument__right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @media (--mobile) {
+    gap: 6rem;
+  }
+}
+
+.argument__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+
+  @media (--mobile) {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-align: center;
+  }
+
+  & b {
+    color: var(--primary-color);
+    font-weight: inherit;
+  }
+}
+
+.argument__links {
+  display: flex;
+  align-items: center;
+
+  gap: 2.6rem;
+  row-gap: 1.3rem;
+
+  @media (--mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+  }
+}
+
+.argument__link-image {
+  height: 6rem;
+  max-width: none;
+  width: auto;
+  display: block;
+}

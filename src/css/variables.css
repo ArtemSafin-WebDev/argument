@@ -1,0 +1,13 @@
+:root {
+  --container-width: 112rem;
+  --content-padding: 2.4rem;
+  --primary-color: #f3ad33;
+  --text-color: #ffffff;
+  --inter: "Inter", sans-serif;
+  --oranienbaum: "Oranienbaum", serif;
+  --mulish: "Mulish", sans-serif;
+
+  @media (--mobile) {
+    --content-padding: 2.4rem;
+  }
+}
