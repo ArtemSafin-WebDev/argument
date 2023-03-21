@@ -1,0 +1,17 @@
+.validation-error {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-top: 0.6rem;
+  padding-left: 2rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-top: 0.6rem;
+    padding-left: 2rem;
+  }
+}

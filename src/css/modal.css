@@ -1,0 +1,226 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  padding: var(--content-padding);
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @media (--mobile) {
+    padding: 0.4rem;
+  }
+}
+
+.modal__inner {
+  width: 100%;
+  margin: auto;
+  max-width: 96rem;
+  position: relative;
+  background: #121619;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 45rem 1fr;
+
+  align-items: center;
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: none;
+    min-height: 46rem;
+    justify-content: center;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  z-index: 40;
+  width: 2.2rem;
+  height: 2.2rem;
+  right: 2.4rem;
+  top: 2.4rem;
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+
+  @media (--mobile) {
+    top: 2rem;
+    right: 1.5rem;
+  }
+}
+
+.modal__text-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  padding-left: 7rem;
+  padding-bottom: 8rem;
+  padding-right: 3rem;
+  position: relative;
+  z-index: 15;
+
+  @media (--mobile) {
+    padding: 2.5rem;
+    padding-top: 5.6rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.modal__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.6rem;
+  line-height: 5.6rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  @media (--mobile) {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.modal__form {
+}
+
+.modal__form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-bottom: 4rem;
+
+  @media (--mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.modal__form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin-bottom: 0.6rem;
+  padding-left: 2rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 0.6rem;
+    padding-left: 2rem;
+  }
+}
+
+.modal__form-input {
+  display: block;
+  width: 100%;
+  height: 6.4rem;
+  background: #1d2228;
+  border-radius: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-family: var(--inter);
+  padding: 0 2rem;
+  color: white;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    height: 5.6rem;
+  }
+}
+
+.modal__form-submit {
+  display: block;
+  text-align: center;
+  padding: 2.1rem 4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #121619;
+  background: #f3ad33;
+  border-radius: 1rem;
+  width: 100%;
+  @media (--mobile) {
+    padding: 1.7rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+.modal__image-wrapper {
+  position: relative;
+  z-index: 1;
+
+  @media (--mobile) {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 57.8rem;
+    height: 57.8rem;
+    background: #202c35;
+    filter: blur(11.7rem);
+    border-radius: 4rem;
+    pointer-events: none;
+    z-index: -1;
+    margin-left: 10rem;
+  }
+}
+
+.modal__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.modal__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}

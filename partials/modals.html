@@ -1,0 +1,56 @@
+<div class="modal js-modal" id="callback-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-modal-close" type="button">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <div class="modal__text-content">
+            <h2 class="modal__heading">
+                Записаться на консультацию
+            </h2>
+            <form action="/" class="modal__form" method="POST">
+                <div class="modal__form-fields">
+                    <div class="modal__form-field">
+                        <label for="name" class="modal__form-label">Имя</label>
+                        <div class="modal__form-input-wrapper">
+                            <input type="text" name="name" class="modal__form-input" required="" id="name">
+                        </div>
+                    </div>
+                    <div class="modal__form-field">
+                        <label for="phone" class="modal__form-label">Телефон</label>
+                        <div class="modal__form-input-wrapper">
+                            <input type="tel" name="phone" class="modal__form-input" required="" id="phone">
+                        </div>
+                    </div>
+                </div>
+                <button class="modal__form-submit" type="submit">
+                    Записаться на консультацию
+                </button>
+            </form>
+        </div>
+        <div class="modal__image-wrapper">
+            <img src="/images/modal-image.webp" alt="" class="modal__image">
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="success-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-modal-close" type="button">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <div class="modal__text-content">
+            <h2 class="modal__heading">
+                Записаться на консультацию
+            </h2>
+            <div class="modal__text">
+                Мы свяжемся с вами<br> в ближайшее время
+            </div>
+        </div>
+        <div class="modal__image-wrapper">
+            <img src="/images/modal-image.webp" alt="" class="modal__image">
+        </div>
+    </div>
+</div>
